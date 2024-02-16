@@ -2,7 +2,7 @@
   "outputDirectory": "dist",
   "routes": [
     {
-      "src": "/(*)",
+      "src": "/(.*)",
       "dest": "src/main.ts",
       "methods": ["POST"]
     }
