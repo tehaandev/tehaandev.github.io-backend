@@ -3,11 +3,11 @@ import { SNSClient, PublishCommand } from '@aws-sdk/client-sns';
 
 @Injectable()
 export class SnsService {
-  private readonly region = process.env.AWS_SNS_REGION;
-  private readonly topicARN = process.env.AWS_SNS_TOPIC_ARN;
+  private readonly region = process.env.SNS_REGION;
+  private readonly topicARN = process.env.SNS_TOPIC_ARN;
   private readonly credentials = {
-    accessKeyId: process.env.AWS_ACCESS_KEY,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
+    accessKeyId: process.env.ACCESS_KEY,
+    secretAccessKey: process.env.SECRET_ACCESS_KEY
   }
 
   private readonly snsClient = new SNSClient({ region: this.region, credentials: this.credentials })
