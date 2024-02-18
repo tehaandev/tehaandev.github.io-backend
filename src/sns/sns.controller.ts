@@ -4,7 +4,7 @@ import { CreateSnDto } from './dto/create-sn.dto';
 
 @Controller('sns')
 export class SnsController {
-  constructor(private readonly snsService: SnsService) { }
+  constructor(private readonly snsService: SnsService) {}
 
   @Post()
   publish(@Body() createSnDto: CreateSnDto) {
